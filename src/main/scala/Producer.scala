@@ -31,12 +31,12 @@ object Producer extends App {
     val year = 2015 + Random.nextInt(5)
     val date = s"$day/$month/$year"
 
-    // Generates an error
-    val error = ((c % 20) + 20) % 20
+    // Generates an alert
+    val alert = ((c % 20) + 20) % 20
 
     val message ={
       // If this is a simulated error, the drone send "unknown" instead of a normal violation code
-      if (error==0)
+      if (alert==0)
         Message(Random.nextInt(1000).toString, s"NY", date, s"unknown", car_model, car_brand, Random.nextInt(2000).toString, Random.nextInt(300).toString, car_color, (1990 +  Random.nextInt(30)).toString)
       else
         Message(Random.nextInt(1000).toString, s"NY", date, Random.nextInt(100).toString, car_model, car_brand, Random.nextInt(2000).toString, Random.nextInt(300).toString, car_color, (1990 +  Random.nextInt(30)).toString)
