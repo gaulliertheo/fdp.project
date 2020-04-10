@@ -1,0 +1,1 @@
+case class Message(drone_id: String,state: String, date: String, violation_code: String, vehicle_type: String, vehicle_brand: String, street_code: String, house_number: String, vehicle_color: String, vehicle_year: String)
